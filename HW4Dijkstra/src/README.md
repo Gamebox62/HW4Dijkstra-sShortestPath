@@ -2,6 +2,14 @@ Dijkstra's Shortest Path Algorithm is an algorithm for finding the shortest path
 
 Edsger W. Dijkstra was a Dutch computer scientist that made many contributions to the field, including a solution to the shortest path problem in a graph. The solution discussed here uses a min-heap to store the shortest known distances from the source. Let's look at a step-by-step execution of the algorithm for the example above.
 
+Algorithm for Dijkstra’s Algorithm:
+1. Mark the source node with a current distance of 0 and the rest with infinity.
+2. Set the non-visited node with the smallest current distance as the current node.
+3. For each neighbor, N of the current node adds the current distance of the adjacent node with the weight of the edge connecting 0->1. If it is smaller than the current distance of Node, set it as the new current distance of N.
+4. Mark the current node 1 as visited.
+5. Go to step 2 if there are any nodes are unvisited.
+
+An example problem:
 The algorithm begins by adding the cost to reach the source vertex, which is (of course) 0. We will use the notation (source, weight) to represent that. In the solution for the shortest path problem, the heap uses the weight of an edge to sort the values. A distance list is created to record the cost to reach each of the destinations from source. The distance list is initialized with the maximum possible value for the weight, represented as ∞, except to reach the source, which should be set to zero.
 
 The distances are initialized as: [0, ∞, ∞, ∞, ∞, ∞, ∞, ∞, ∞]
